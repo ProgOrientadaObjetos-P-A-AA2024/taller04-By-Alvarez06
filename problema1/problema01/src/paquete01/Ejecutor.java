@@ -13,7 +13,7 @@ public class Ejecutor {
 
         System.out.printf("%s\n", est1);
         System.out.printf("%s\n", est2);
-        
+
     }
 
 }

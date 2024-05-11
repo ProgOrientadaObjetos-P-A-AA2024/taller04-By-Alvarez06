@@ -5,17 +5,15 @@ import paquete02.Automotor;
 public class Ejecutor {
 
     public static void main(String[] args) {
-        Automotor doc1 = new Automotor("Byron", "Alvarez", 860.5f, 1105749939);
-        Automotor doc2 = new Automotor("Erick", "Toledo", 1200.95f);
+        Automotor mat1 = new Automotor(1105749939, "Ford", 2022, 65000f);
+        Automotor mat2 = new Automotor("Chevrolet", 2020, 30900f);
 
-        doc1.calcularSueldoTotal();
-        doc2.calcularSueldoTotal();
+        mat1.calcularValorMatricula();
+        mat2.calcularValorMatricula();
 
-        System.out.printf("%s\n", doc1);
-        System.out.printf("%s\n", doc2);
-        
-        //DIAGRAMA DEL DIA POR HACER
-        
+        System.out.printf("%s\n", mat1);
+        System.out.printf("%s\n", mat2);
+
     }
 
 }

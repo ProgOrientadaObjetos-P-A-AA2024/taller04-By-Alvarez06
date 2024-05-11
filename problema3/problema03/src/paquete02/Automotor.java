@@ -7,7 +7,6 @@ public class Automotor {
     private int anioFabricacion;
     private float valorVehiculo;
     private float valorMatricula;
-    
 
     public Automotor(int c, String m, int a, float v) {
         cedula = c;
@@ -15,7 +14,7 @@ public class Automotor {
         anioFabricacion = a;
         valorVehiculo = v;
     }
-    
+
     public Automotor(String m, int a, float v) {
         cedula = 110999999;
         marca = m;
@@ -23,56 +22,55 @@ public class Automotor {
         valorVehiculo = v;
     }
 
-
-    public void establecerNombre(String s) {
-        nombre = s;
-    }
-
-    public void establecerApellido(String s) {
-        apellido = s;
-    }
-
-    public void establecerSueldoBasico(float n) {
-        sueldoBasico = n;
-    }
-
     public void establecerCedula(int n) {
         cedula = n;
     }
 
-    public void calcularSueldoTotal() {
-        sueldoTotal = sueldoBasico + (sueldoBasico * 0.2f);
+    public void establecerMarca(String s) {
+        marca = s;
     }
 
-    public String obtenerNombre() {
-        return nombre;
+    public void establecerAnio(int n) {
+        anioFabricacion = n;
     }
 
-    public String obtenerApellido() {
-        return apellido;
+    public void establecerValorVehiculo(float n) {
+        valorVehiculo = n;
     }
 
-    public float obtenerSueldoBasico() {
-        return sueldoBasico;
+    public void calcularValorMatricula() {
+        valorMatricula = (valorVehiculo * 0.002f) * (2024 - anioFabricacion);
     }
 
-    public float obtenerCedula() {
+    public int obtenerCedula() {
         return cedula;
     }
 
-    public float obtenerSueldoTotal() {
-        return sueldoTotal;
+    public String obtenerMarca() {
+        return marca;
+    }
+
+    public int obtenerAnio() {
+        return anioFabricacion;
+    }
+
+    public float obtenerValorVehiculo() {
+        return valorVehiculo;
+    }
+
+    public float obtenerValorMatricula() {
+        return valorMatricula;
     }
 
     @Override
     public String toString() {
-        String cadena = String.format("Salario de un profesor\n"
-                + "Nombre del docente: %s\n"
-                + "Apellido: %s\n"
+        String cadena = String.format("Valor de Matricula de un Auto\n"
                 + "Cedula de Identidad: %d\n"
-                + "Sueldo Básico: %.2f\n"
-                + "Sueldo Total: %.2f\n",
-                nombre, apellido, cedula, sueldoBasico, sueldoTotal);
+                + "Marca del Vehiculo: %s\n"
+                + "Anio de Fabricacion: %d\n"
+                + "Valor del Vehiculo: %.2f\n"
+                + "Valor de la Matricula: %.2f\n",
+                cedula, marca, anioFabricacion, valorVehiculo, valorMatricula);
         return cadena;
     }
 

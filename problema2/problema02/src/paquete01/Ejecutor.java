@@ -13,9 +13,7 @@ public class Ejecutor {
 
         System.out.printf("%s\n", doc1);
         System.out.printf("%s\n", doc2);
-        
-        //DIAGRAMA DEL DIA POR HACER
-        
+
     }
 
 }
